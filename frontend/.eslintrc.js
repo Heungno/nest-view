@@ -30,5 +30,6 @@ module.exports = {
         'vetur.validation.template': false,
         'vetur.validation.script': false,
         'vetur.validation.style': false,
+        'vue/no-unused-vars': 'error',
     },
 };
