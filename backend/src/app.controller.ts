@@ -3,14 +3,14 @@ import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+    constructor(private readonly appService: AppService) {}
 
-  private readonly logger = new Logger(AppController.name);
+    private readonly logger = new Logger(AppController.name);
 
-  @Get()
-  @Header('Cache-Control', '')
-  getHello(): string {
-    this.logger.log('Calling getHello()');
-    return this.appService.getHello();
-  }
+    @Get()
+    @Header('Cache-Control', '')
+    getHello() {
+        this.logger.log('Calling getHello()');
+        return { test: this.appService.getHello() };
+    }
 }
