@@ -1,7 +1,5 @@
 import { NestFactory } from '@nestjs/core';
-import { NestExpressApplication } from '@nestjs/platform-express';
 import { NestApplicationOptions, ValidationPipe } from '@nestjs/common';
-import { join } from 'path';
 import * as cookieParser from 'cookie-parser';
 import * as helmet from 'helmet';
 import * as csurf from 'csurf';
@@ -18,7 +16,7 @@ async function bootstrap() {
         logger: logger,
     };
 
-    const app = await NestFactory.create<NestExpressApplication>(AppModule, nestAppOptions);
+    const app = await NestFactory.create(AppModule, nestAppOptions);
 
     console.log(JSON.stringify(nestWinstonModuleUtilities.format.nestLike('API')));
 
@@ -35,7 +33,7 @@ async function bootstrap() {
     app.setGlobalPrefix(process.env.ROUTE_PREFIX || 'api');
 
     app.use(cookieParser());
-    app.useStaticAssets(join(__dirname, '..', 'frontend'));
+
     // Security
     app.use(helmet());
     app.use(csurf({ cookie: true }));

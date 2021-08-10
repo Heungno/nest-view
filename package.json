@@ -1,0 +1,20 @@
+{
+    "name": "nest-vue",
+    "version": "1.0.0",
+    "description": "backend nest frontend vue",
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Heungno/nest-view.git"
+    },
+    "keywords": [
+        "nest",
+        "vue"
+    ],
+    "author": "heungno",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Heungno/nest-view/issues"
+    },
+    "homepage": "https://github.com/Heungno/nest-view#readme"
+}

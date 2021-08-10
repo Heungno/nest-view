@@ -4,6 +4,9 @@ import { format, transports } from 'winston';
 import 'winston-daily-rotate-file';
 
 const logPath = process.env.LOG_PATH || process.cwd() + '/logs';
+const nestLikeFormat = format.printf(({ context, level, timestamp, message }) => {
+    return `${level}: ${new Date(timestamp).toLocaleString()}\t [${context}] ${message}`;
+});
 
 export class winstonOption {
     static option: WinstonModuleOptions = {
@@ -13,7 +16,8 @@ export class winstonOption {
             //format.prettyPrint(),
             //format.json(),
             //format.simple(),
-            format.ms(),
+            //format.ms(),
+            //nestLikeFormat.
             nestWinstonModuleUtilities.format.nestLike('API'),
         ),
         transports: [
