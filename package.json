@@ -2,7 +2,9 @@
     "name": "nest-vue",
     "version": "1.0.0",
     "description": "backend nest frontend vue",
-    "scripts": {},
+    "scripts": {
+        "start": "NODE_ENV=prod NODE_PATH=./backend/node_modules node ./dist/backend/main"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Heungno/nest-view.git"

@@ -12,7 +12,7 @@
         "start": "cross-env NODE_ENV=prod NODE_PATH=../backend/node_modules nest start",
         "start:dev": "cross-env NODE_ENV=dev NODE_PATH=../backend/node_modules nest start --watch",
         "start:debug": "nest start --debug --watch",
-        "start:prod": "NODE_ENV=prod NODE_PATH=../backend/node_modules node node ../dist/backend/main",
+        "start:prod": "NODE_ENV=prod NODE_PATH=../backend/node_modules node ../dist/backend/main",
         "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
         "test": "jest",
         "test:watch": "jest --watch",
