@@ -3,7 +3,9 @@
     "version": "1.0.0",
     "description": "backend nest frontend vue",
     "scripts": {
-        "start": "NODE_ENV=prod NODE_PATH=./backend/node_modules node ./dist/backend/main"
+        "start": "NODE_ENV=prod NODE_PATH=./backend/node_modules node ./dist/backend/main",
+        "build:backend": "cd ./backend && npm run  build",
+        "build:frontend": "cd ./frontend && npm run  build"
     },
     "repository": {
         "type": "git",
